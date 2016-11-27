@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id='cvs' style='border:1px solid red'></canvas>
+<script>
+    /*
+    * canvas开发第一步，需要一个canvas标记
+    * canvas画布
+    * 要真正的画图，需要通过canvasDOM对象获取一个绘图环境。
+    * 要获取这个绘图环境，需要调用一个方法：getContext（获取绘图环境）
+    *
+    * getContext语法：
+    * param：‘2d’或者‘webgl’
+    * 2d获取绘制2d图像的环境
+    * webgl获取绘制3d图像的环境
+    *
+    * 范例：
+    * var ctx = canvas.getContext("2d");
+    *
+    * 什么是路径？
+    * 路径就是画图之前的规划，并不是真正的画图
+    * 要让路径生效，需要调用一个绘制方法
+    *
+    * 画图形的基本三步骤
+    * 1、先移动钢笔到一个坐标点
+    * 2、可以画路径
+    * 3、描边
+    *
+    * */
+    //获取canvasDOM对象
+    var nCvs = document.getElementById('cvs');
+    //获取2d绘图环境
+    var ctx = nCvs.getContext('2d');
+
+    ctx.moveTo(10,30);
+    ctx.lineTo(10,50);
+    ctx.stroke();
+
+</script>
+</body>
+</html>
